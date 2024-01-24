@@ -16,7 +16,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import java.util.Properties;
 
 @Configuration
-public class JapConfig {
+public class JpaConfig {
 
     @Autowired
     private ApplicationContext applicationContext;
