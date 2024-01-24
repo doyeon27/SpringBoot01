@@ -28,6 +28,9 @@ public class UserAPIController {
     // 추가
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user){
+        // @RequestBody User user 는 HTTP 요청의 본문에 있는 데이터를 User 객체로
+        // 변환하고 이는 클라이언트에서 전달한 JSON 또는 폼 데이터 등을 자바객체로 매핑하는 역할을 함
+
         User saveduser = userService.createUser(user);
 
         return new ResponseEntity<>(saveduser, HttpStatus.CREATED);
@@ -51,7 +54,10 @@ public class UserAPIController {
     // 삭제
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") Long userId){
+        // userServiceImpl 에서 구현한 deleteUser 메소드 기능을 통해 입력받은 userId 를 DB 에서 삭제함
         userService.deleteUser(userId);
+
+        // 삭제되었다는걸 출력해줌
         return new ResponseEntity<>("삭제성공", HttpStatus.OK);
     }
 }
