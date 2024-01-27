@@ -33,12 +33,18 @@ public class IndexController {
 
     @GetMapping("/login")
     public String loginPG(Model model, HttpSession httpSession){
-
-
         return "/login";
     }
 
+    @GetMapping("/signUp")
+    public String signUp(Model model, HttpSession httpSession){
+        return "/signUp";
+    }
 
+    @GetMapping("/host")
+    public String host(Model model, HttpSession httpSession){
+        return "/rest_host";
+    }
 
 
 }
