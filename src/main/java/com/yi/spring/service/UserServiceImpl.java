@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -58,4 +59,14 @@ public class UserServiceImpl implements UserService{
         // 그래서 Math.toIntExact 메소드를 사용해서 userId를 int 로 변환함
         userRepository.deleteById(Math.toIntExact(userId));
     }
+
+    @Override
+    public Optional<User> getUserEmail(String email){
+        // findByEmail 는 JpaRepository 에서 자동생성된 쿼리 메소드임. 주어진 이메일에 해당하는 사용자를 찾아주는 역할을 함
+        // 반환 타입은 Optional<User> .
+        return userRepository.findByEmail(email);
+    }
+
+
+
 }
