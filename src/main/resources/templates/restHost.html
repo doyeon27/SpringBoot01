@@ -17,28 +17,53 @@
 </head>
 
 <style>
-    *{
+    * {
         border: solid 1px blue;
     }
+
     div.left {
         width: 100%;
         height: 100vw;
         border: 1px solid #003458;
     }
+
     div.left {
         width: 30%;
         float: left;
         box-sizing: border-box;
         background: #8977ad;
     }
+
     div.right {
         width: 70%;
         float: right;
         box-sizing: border-box;
         background: #ece6cc;
+        height: 100vw;
+
     }
+
+    #Reservation_form{
+        height: 300px;
+
+    }
+
+    #Reservation_list{
+        height: 300px;
+    }
+
+    #Reservation_info{
+        height: 300px;
+    }
+
+    #Reservation_info2{
+        height: 250px;
+    }
+
 </style>
+
 <body>
+
 <div th:include="~{/include/header::headerFragment}">
     head
 </div>
@@ -52,18 +77,21 @@
     </ul>
 </div>
 
-<div>예약 폼</div>
+<div class="right">
+    <div id="Reservation_form">예약 폼d</div>
 
 
-<div>예약 리스트 폼</div>
+    <div id="Reservation_list">예약 리스트 폼</div>
 
 
-<div>
-    예약정보
-    <div>ID, 인원, 시간, 날짜
-        <button>수락</button>
-        <button>취소</button>
+    <div id="Reservation_info">
+        예약정보
+        <div id="Reservation_info2">ID, 인원, 시간, 날짜
+            <button>수락</button>
+            <button>취소</button>
+        </div>
     </div>
+
 </div>
 
 <footer th:include="~{/include/footer::footerFragment}">
@@ -73,15 +101,14 @@
 </body>
 
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"-->
+<!--        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"-->
+<!--        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--        crossorigin="anonymous"></script>-->
 
 </html>
